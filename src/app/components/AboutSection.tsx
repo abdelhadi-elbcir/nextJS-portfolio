@@ -29,10 +29,10 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>Bac Science Physique 2020</li>
         <li>
-          Diplôme D'études Universitaires Scientifiques Et Techniques 2022
+          Diplôme D&apos;études Universitaires Scientifiques Et Techniques 2022
         </li>
         <li>
-          Ingénierie Informatique Et Systèmes D'information (Actuellement) 2024
+          Ingénierie Informatique Et Systèmes D&apos;information (Actuellement) 2024
         </li>
       </ul>
     ),
