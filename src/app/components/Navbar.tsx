@@ -2,20 +2,20 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import NavLink from './NavLink'
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from './MenuOverlay';
-
 export const listItems = [
     {
         title: "About",
         link: "#about"
     },
     {
-        title: "porjects",
-        link: "#porjects"
+        title: "projects",
+        link: "#projects"
     },
     {
-        title: "Eduction",
-        link: "#eduction"
+        title: "Contact",
+        link: "#contact"
     },
 ]
 
@@ -27,21 +27,15 @@ function Navbar() {
     return (
         <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90'>
             <div className='flex flex-wrap items-center justify-between mx-auto px-4 py-2'>
-                <Link href={"/"} className='text-2xl md:text-5xl text-white font-semibold'>LOGO</Link>
+                <Link href={"/"} className='text-2xl md:text-5xl text-white font-semibold'>EL BCIR<sub>abdo</sub></Link>
                 <div className='mobile-menu block md:hidden' >
                     {
                         !openedBar ?
                             <button onClick={()=>setOpenedBar(true)} className='flex items-center px-2 py-2 border rounded border-slate-200 text-slate-200 hover:border-white'>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-
+                                <Bars3Icon/>
                             </button> :
                             <button onClick={()=>setOpenedBar(false)} className='flex items-center px-2 py-2 border rounded border-slate-200 text-slate-200 hover:border-white'>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-
+                                <XMarkIcon/>
                             </button>
                     }
                 </div>
